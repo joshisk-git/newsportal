@@ -48,7 +48,7 @@ class Post(TimeStampModel):
     views_count = models.PositiveIntegerField(default=0)
     is_breaking_news = models.BooleanField(default=False)
     published_at = models.DateTimeField(null=True, blank=True)
-    Category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tag = models.ManyToManyField(Tag)
 
 
